@@ -24,9 +24,7 @@ body {
   background: linear-gradient(15deg, $secondary1, $secondary2);
   display: flex;
   align-items: center;
-  flex-direction: column;
   justify-content: center;
-  gap: 30px;
   height: 100vh;
   .btn {
     letter-spacing: 2.5px;
