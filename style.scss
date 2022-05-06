@@ -45,6 +45,11 @@ body {
       background-color: $secondary1;
       color: $mainColor;
     }
+    &:active {
+      background-color: $mainColor;
+      color: #fff;
+      transition: none;
+    }
     .border-top {
       @include borderBlueprint("width", "top");
       top: 0;
