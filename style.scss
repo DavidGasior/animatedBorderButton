@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
 
-$mainColor: #ffd43b;
-$secondary1: #fff3bf;
-$secondary2: #e6fcf5;
-$secondary3: #fcc419;
+$mainColor: #66a80f;
+$secondary1: #f4fce3;
+$secondary2: #ebfbee;
 
 $width: 200px;
 $height: 50px;
@@ -36,7 +35,7 @@ body {
     font-family: inherit;
     text-transform: uppercase;
     font-size: 18px;
-    background-color: $secondary3;
+    background-color: $mainColor;
     border: none;
     color: #fff;
     cursor: pointer;
