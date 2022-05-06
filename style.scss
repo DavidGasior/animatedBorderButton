@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+$mainColor: #ffd43b;
+$secondary1: #fff3bf;
+$secondary2: #e6fcf5;
+$secondary3: #fcc419;
+
+$width: 200px;
+$height: 50px;
+$transitionDuration: 0.4s;
+
+@mixin borderBlueprint($orientation, $side) {
+  position: absolute;
+  border-#{$side}: 2px solid $mainColor;
+  #{$orientation}: 0;
+  transition: #{$orientation} $transitionDuration ease-in-out;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Noto Serif", serif;
+  background: linear-gradient(15deg, $secondary1, $secondary2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  height: 100vh;
+  .btn {
+    letter-spacing: 2.5px;
+    width: $width;
+    height: $height;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 18px;
+    background-color: $secondary3;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: ease-in-out $transitionDuration;
+    &:hover {
+      background-color: $secondary1;
+      color: $mainColor;
+    }
+    .border-top {
+      @include borderBlueprint("width", "top");
+      top: 0;
+    }
+    &:hover .border-top {
+      width: $width;
+    }
+    .border-left {
+      @include borderBlueprint("height", "left");
+      transition: height $transitionDuration ease-in-out;
+      top: 0;
+      left: 0;
+    }
+    &:hover .border-left {
+      height: $height;
+    }
+    .border-right {
+      @include borderBlueprint("height", "right");
+      bottom: 0;
+      right: 0;
+    }
+    &:hover .border-right {
+      height: $height;
+    }
+    .border-bottom {
+      @include borderBlueprint("width", "bottom");
+      bottom: 0;
+      right: 0;
+    }
+    &:hover .border-bottom {
+      width: $width;
+    }
+  }
+}
