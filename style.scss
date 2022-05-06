@@ -59,7 +59,6 @@ body {
     }
     .border-left {
       @include borderBlueprint("height", "left");
-      transition: height $transitionDuration ease-in-out;
       top: 0;
       left: 0;
     }
